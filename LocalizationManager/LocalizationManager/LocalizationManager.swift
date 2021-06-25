@@ -25,7 +25,7 @@ class LocalizationManager: NSObject {
     }
     
     static let shared = LocalizationManager()
-    private var bundle: Bundle? = nil
+    private var bundle: Bundle? = .main
     private var languageKey = "UKPrefLang"
     weak var delegate: LocalizationDelegate?
     
