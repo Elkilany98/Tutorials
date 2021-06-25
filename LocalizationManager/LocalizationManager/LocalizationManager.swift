@@ -63,8 +63,9 @@ class LocalizationManager: NSObject {
     
     // get localized string for a given code from the active bundle
     func localizedString(for key: String, value comment: String) -> String {
-        let localized = bundle!.localizedString(forKey: key, value: comment, table: nil)
-        return localized
+
+        return NSLocalizedString(key, tableName: nil, bundle: self.bundle!, value: comment, comment: comment)
+
     }
     
     // set language for localization
